@@ -14,6 +14,7 @@ program
     .command("run")
     .argument("<year>", "Year (e.g. 2015)")
     .argument("<day>", "Day (e.g. 1)")
+    .option("--docker", "Run inside Docker")
     .action(runCommand);
 
 program.parse();

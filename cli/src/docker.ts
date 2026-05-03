@@ -1,4 +1,4 @@
-import { spawn } from "child_process";
+import { spawn, execSync } from "child_process";
 
 function run(command: string, args: string[], cwd?: string): Promise<void> {
     return new Promise((resolve, reject) => {
@@ -14,13 +14,36 @@ function run(command: string, args: string[], cwd?: string): Promise<void> {
     });
 }
 
-export async function buildImage(contextPath: string, tag: string) {
+export function imageExists(tag: string): boolean {
+  try {
+    execSync(`docker image inspect ${tag}`, { stdio: "ignore" });
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+export async function buildImageIfNeeded(contextPath: string, tag: string) {
+    if (imageExists(tag)) return;
+
     console.log(`→ Building Docker image: ${tag}`);
     await run("docker", ["build", "-t", tag, "."], contextPath);
 }
 
-export async function runContainer(tag: string, day: string) {
+export async function runContainer(contextPath: string, tag: string, day: string) {
     console.log(`→ Running container: ${tag}`);
 
-    await run("docker", ["run", "--rm", tag, day]);
+    await run(
+        "docker",
+        [
+            "run",
+            "--rm",
+            "-v",
+            `${contextPath}:/app`,
+            "-v",
+            "/app/node_modules",
+            tag,
+            day,
+        ]
+    );
 }

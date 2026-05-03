@@ -14,9 +14,6 @@ importers:
       commander:
         specifier: ^14.0.3
         version: 14.0.3
-      npx:
-        specifier: ^10.2.2
-        version: 10.2.2
       typescript:
         specifier: ^6.0.3
         version: 6.0.3
@@ -219,14 +216,6 @@ packages:
   get-tsconfig@4.14.0:
     resolution: {integrity: sha512-yTb+8DXzDREzgvYmh6s9vHsSVCHeC0G3PI5bEXNBHtmshPnO+S5O7qgLEOn0I5QvMy6kpZN8K1NKGyilLb93wA==}
 
-  npx@10.2.2:
-    resolution: {integrity: sha512-eImmySusyeWphzs5iNh791XbZnZG0FSNvM4KSah34pdQQIDsdTDhIwg1sjN3AIVcjGLpbQ/YcfqHPshKZQK1fA==}
-    deprecated: This package is now part of the npm CLI.
-    hasBin: true
-    bundledDependencies:
-      - npm
-      - libnpx
-
   resolve-pkg-maps@1.0.0:
     resolution: {integrity: sha512-seS2Tj26TBVOC2NIc2rOe2y2ZO7efxITtLZcGSOnHHNOQ7CkiUBfw0Iw2ck6xkIhPwLhKNLS8BO+hEpngQlqzw==}
 
@@ -366,8 +355,6 @@ snapshots:
   get-tsconfig@4.14.0:
     dependencies:
       resolve-pkg-maps: 1.0.0
-
-  npx@10.2.2: {}
 
   resolve-pkg-maps@1.0.0: {}
 
