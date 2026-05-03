@@ -12,8 +12,12 @@
   "license": "ISC",
   "packageManager": "pnpm@10.28.1",
   "dependencies": {
+    "child_process": "^1.0.2",
     "commander": "^14.0.3",
     "npx": "^10.2.2",
     "typescript": "^6.0.3"
+  },
+  "devDependencies": {
+    "@types/node": "^25.6.0"
   }
 }
