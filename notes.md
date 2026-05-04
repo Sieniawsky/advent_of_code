@@ -2,9 +2,9 @@
 aoc
 aoc --year 2015
 aoc --year 2015 --day 1
-aoc --year 2015 --day 1 --first
-aoc --year 2015 --day 1 --last
-aoc -y 2015 -d 1 -f
+aoc --year 2015 --day 1 --part 1
+aoc --year 2015 --day 1 --part 2
+aoc -y 2015 -d 1 -p 1
 
 ## Plan
 - Implement CLI tooling
