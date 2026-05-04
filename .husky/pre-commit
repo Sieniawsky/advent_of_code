@@ -1,4 +1,3 @@
 #!/bin/sh
 
-npx lint-staged --workspace=years/2015
-npx lint-staged --workspace=cli
+npx lint-staged
