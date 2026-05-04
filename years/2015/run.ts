@@ -35,7 +35,7 @@ async function main() {
         }
 
         const start = performance.now();
-        const result: string = fn(input.trimEnd());
+        const result: string = String(fn(input.trimEnd()));
         const end = performance.now();
 
         console.log(`Day ${day} part ${part} result: ${result}.`);
