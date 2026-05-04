@@ -1,22 +1,22 @@
 {
-  "name": "cli",
-  "version": "1.0.0",
-  "type": "module",
-  "description": "AOC CLI",
-  "bin": {
-    "aoc": "./dist/cli.js"
-  },
-  "scripts": {
-    "build": "tsc"
-  },
-  "license": "ISC",
-  "packageManager": "pnpm@10.28.1",
-  "dependencies": {
-    "child_process": "^1.0.2",
-    "commander": "^14.0.3",
-    "typescript": "^6.0.3"
-  },
-  "devDependencies": {
-    "@types/node": "^25.6.0"
-  }
+    "name": "cli",
+    "version": "1.0.0",
+    "type": "module",
+    "description": "AOC CLI",
+    "bin": {
+        "aoc": "./dist/cli.js"
+    },
+    "scripts": {
+        "build": "tsc"
+    },
+    "license": "ISC",
+    "packageManager": "pnpm@10.28.1",
+    "dependencies": {
+        "child_process": "^1.0.2",
+        "commander": "^14.0.3",
+        "typescript": "^6.0.3"
+    },
+    "devDependencies": {
+        "@types/node": "^25.6.0"
+    }
 }
