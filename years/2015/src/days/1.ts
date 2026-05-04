@@ -13,7 +13,7 @@ export function part_one(input: string): number {
     return counter;
 }
 
-export function part_two(input: string) {
+export function part_two(input: string): number {
     let index = 0;
     let counter = 0;
     _.each(input.split(""), (e, i) => {
